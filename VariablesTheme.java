@@ -27,10 +27,10 @@ public class VariablesTheme {
         int bookPrice = 200;
         byte discount = 11;
         double discountAmount = (penPrice + bookPrice) / 100 * discount;
-        double resDiscountedPrice = (penPrice + bookPrice) - discountAmount;
+        double discountPrice = (penPrice + bookPrice) - discountAmount;
 
         System.out.println("Сумма скидки = " + discountAmount + " руб.\n" +
-                "Стоимость товара со скидкой = " + resDiscountedPrice + " руб.\n");
+                "Стоимость товара со скидкой = " + discountPrice + " руб.\n");
 
         System.out.println("3. Вывод на консоль слова JAVA");
         System.out.println("   J    a  v     v  a     \n   J   a a  v  v   a a    \nJ  J  aaaaa  V V  aaaaa   \n JJ  a     a  V  a     a\n");
@@ -43,162 +43,160 @@ public class VariablesTheme {
 
         System.out.println("Byte:\n" +
                 "первоначальное значение = " + numMaxByte + "\n" +
-                "значение после инкремента = " + numMaxByte++ + "\n" +
-                "значение после декремента = " + numMaxByte-- + "\n" +
+                "значение после инкремента = " + ++numMaxByte + "\n" +
+                "значение после декремента = " + --numMaxByte + "\n" +
                 "------------------------------------------------" + "\n" +
                 "Short:\n" +
                 "первоначальное значение = " + numMaxShort + "\n" +
-                "значение после инкремента = " + numMaxShort++ + "\n" +
-                "значение после декремента = " + numMaxShort-- + "\n" +
+                "значение после инкремента = " + ++numMaxShort + "\n" +
+                "значение после декремента = " + --numMaxShort + "\n" +
                 "------------------------------------------------" + "\n" +
                 "Int:\n" +
                 "первоначальное значение = " + numMaxInt + "\n" +
-                "значение после инкремента = " + numMaxInt++ + "\n" +
-                "значение после декремента = " + numMaxInt-- + "\n" +
+                "значение после инкремента = " + ++numMaxInt + "\n" +
+                "значение после декремента = " + --numMaxInt + "\n" +
                 "------------------------------------------------" + "\n" +
                 "Long:\n" +
                 "первоначальное значение = " + numMaxLong + "\n" +
-                "значение после инкремента = " + numMaxLong++ + "\n" +
-                "значение после декремента = " + numMaxLong--);
+                "значение после инкремента = " + ++numMaxLong + "\n" +
+                "значение после декремента = " + --numMaxLong);
 
         System.out.println("\n5. Перестановка значений переменных");
 
-        int numFirst = 2;
-        int numSecond = 5;
+        int num1 = 2;
+        int num2 = 5;
 
         System.out.println("Способ 1. Перестановка значений с помощью третьей переменной:\n" +
-                "Исходное значение переменной numFirst = " + numFirst + "\n" +
-                "Исходное значение переменной numSecond = " + numSecond);
+                "Исходное значение переменной num1 = " + num1 + "\n" +
+                "Исходное значение переменной num2 = " + num2);
 
-        int replaceVar = numFirst;
-        numFirst = numSecond;
-        numSecond = replaceVar;
+        int tmp = num1;
+        num1 = num2;
+        num2 = tmp;
 
-        System.out.println("Новое значение переменной numFirst = " + numFirst + "\n" +
-                "Новое значение переменной numSecond = " + numSecond + "\n");
+        System.out.println("Новое значение переменной num1 = " + num1 + "\n" +
+                "Новое значение переменной num2 = " + num2 + "\n");
 
         System.out.println("Способ 2. Перестановка значений с помощью арифметических операций:\n" +
-                "Исходное значение переменной numFirst = " + numFirst + "\n" +
-                "Исходное значение переменной numSecond = " + numSecond);
+                "Исходное значение переменной num1 = " + num1 + "\n" +
+                "Исходное значение переменной num2 = " + num2);
 
-        numFirst += numSecond;
-        numSecond = numFirst - numSecond;
-        numFirst -= numSecond;
+        num1 += num2;
+        num2 = num1 - num2;
+        num1 -= num2;
 
-        System.out.println("Новое значение переменной numFirst = " + numFirst + "\n" +
-                "Новое значение переменной numSecond = " + numSecond + "\n");
+        System.out.println("Новое значение переменной num1 = " + num1 + "\n" +
+                "Новое значение переменной num2 = " + num2 + "\n");
 
         System.out.println("Способ 3. Перестановка значений с помощью арифметических операций:\n" +
-                "Исходное значение переменной numFirst = " + numFirst + "\n" +
-                "Исходное значение переменной numSecond = " + numSecond);
+                "Исходное значение переменной num1 = " + num1 + "\n" +
+                "Исходное значение переменной num2 = " + num2);
 
-        numFirst ^= numSecond;
-        numSecond = numFirst ^ numSecond;
-        numFirst ^= numSecond;
+        num1 ^= num2;
+        num2 = num1 ^ num2;
+        num1 ^= num2;
 
-        System.out.println("Новое значение переменной numFirst = " + numFirst + "\n" +
-                "Новое значение переменной numSecond = " + numSecond);
+        System.out.println("Новое значение переменной num1 = " + num1 + "\n" +
+                "Новое значение переменной num2 = " + num2);
 
         System.out.println("\n6. Вывод символов и их кодов");
 
-        numFirst = (char) 35;
-        numSecond = (char) 38;
-        char numThird = 64;
-        char numFourth = 94;
-        char numFifth = 95;
+        char code1 = 35;
+        char code2 = 38;
+        char code3 = 64;
+        char code4 = 94;
+        char code5 = 95;
 
-        System.out.println("Код символа" + "|" + "Символ\n" +
-                "-----------" + "|" + "-----------\n" +
-                numFirst + "         |" + (char) numFirst + "\n" +
-                numSecond + "         |" + (char) numSecond + "\n" +
-                (int) numThird + "         |" + (char) numThird + "\n" +
-                (int) numFourth + "         |" + (char) numFourth + "\n" +
-                (int) numFifth + "         |" + (char) numFifth);
+        System.out.println((int) code1 + "-" + code1 + "\n" +
+                (int) code2 + "-" + code2 + "\n" +
+                (int) code3 + "-" + code3 + "\n" +
+                (int) code4 + "-" + code4 + "\n" +
+                (int) code5 + "-" + code5);
 
         System.out.println("\n7. Отображение количества сотен, десятков и единиц числа");
 
         int num = 123;
-        int numHundreds = num % 10;
-        int numTens = num / 10 % 10;
-        int numUnite = num / 100;
+        int digit1 = num % 10;
+        int digit2 = num / 10 % 10;
+        int digit3 = num / 100;
 
         System.out.println("Число N содержит:\n" +
-                numHundreds + " сотен\n" +
-                numTens + " десятков\n" +
-                numUnite + " единиц");
+                digit1 + " сотен\n" +
+                digit2 + " десятков\n" +
+                digit3 + " единиц");
 
         System.out.println("\n8. Вывод на консоль ASCII-арт Дюка");
 
-        char asciiWhitespace = 32;
-        char asciiSlash = 47;
-        char asciiBackslash = 92;
-        char asciiDash = 95;
-        char asciiLeftQuotationMark = 40;
-        char asciiRighttQuotationMark = 41;
+        char space = ' ';
+        char slash = '/';
+        char backSlash = '\\';
+        char dash = '_';
+        char leftHand = '(';
+        char rightHand = ')';
 
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiSlash);
-        System.out.print(asciiBackslash);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(slash);
+        System.out.print(backSlash);
         System.out.println();
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiSlash);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiBackslash);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(slash);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(backSlash);
         System.out.println();
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiSlash);
-        System.out.print(asciiDash);
-        System.out.print(asciiLeftQuotationMark);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiRighttQuotationMark);
-        System.out.print(asciiBackslash);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(slash);
+        System.out.print(dash);
+        System.out.print(leftHand);
+        System.out.print(space);
+        System.out.print(rightHand);
+        System.out.print(backSlash);
         System.out.println();
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiSlash);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiWhitespace);
-        System.out.print(asciiBackslash);
+        System.out.print(space);
+        System.out.print(slash);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(space);
+        System.out.print(backSlash);
         System.out.println();
-        System.out.print(asciiSlash);
-        System.out.print(asciiDash);
-        System.out.print(asciiDash);
-        System.out.print(asciiDash);
-        System.out.print(asciiDash);
-        System.out.print(asciiSlash);
-        System.out.print(asciiBackslash);
-        System.out.print(asciiDash);
-        System.out.print(asciiDash);
-        System.out.print(asciiBackslash);
+        System.out.print(slash);
+        System.out.print(dash);
+        System.out.print(dash);
+        System.out.print(dash);
+        System.out.print(dash);
+        System.out.print(slash);
+        System.out.print(backSlash);
+        System.out.print(dash);
+        System.out.print(dash);
+        System.out.print(backSlash);
 
         System.out.println("\n9. Произведение и сумма цифр числа");
 
         num = 345;
-        int firstDigit = num / 100;
-        int secondDigit = num / 10 % 10;
-        int thirdDigit = num % 10;
+        digit1 = num / 100;
+        digit2 = num / 10 % 10;
+        digit3 = num % 10;
 
-        System.out.println("Сумма цифр числа " + num + " = " + (firstDigit + secondDigit + thirdDigit) +
-                "\nПроизведение цифр числа " + num + " = " + (firstDigit * secondDigit * thirdDigit));
+        System.out.println("Сумма цифр числа " + num + " = " + (digit1 + digit2 + digit3) +
+                "\nПроизведение цифр числа " + num + " = " + (digit1 * digit2 * digit3));
 
         System.out.println("\n10. Преобразование секунд");
 
-        int numOfSeconds = 86399;
-        int convertingInHourse  = numOfSeconds / 3600;
-        int convertingInMinutesForSeconds  = numOfSeconds - convertingInHourse * 3600;
-        int convertingInMinutes = convertingInMinutesForSeconds / 60;
-        int convertingInSeconds  = convertingInMinutesForSeconds - convertingInMinutes * 60;
+        num = 86399;
+        int hourse  = num / 3600;
+        int remainingSeconds = num % 3600;
+        int minutes  = remainingSeconds / 60;
+        int seconds = remainingSeconds % 60;
 
-        System.out.println(convertingInHourse + ":" + convertingInMinutes + ":" + convertingInSeconds);
+        System.out.println(hourse + ":" + minutes + ":" + seconds);
     }
 }
