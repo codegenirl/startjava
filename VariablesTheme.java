@@ -116,9 +116,10 @@ public class VariablesTheme {
         System.out.println("\n7. Отображение количества сотен, десятков и единиц числа");
 
         int num = 123;
-        int digit1 = num % 10;
+
+        int digit1 = num / 100;
         int digit2 = num / 10 % 10;
-        int digit3 = num / 100;
+        int digit3 = num % 10;
 
         System.out.println("Число N содержит:\n" +
                 digit1 + " сотен\n" +
@@ -134,50 +135,11 @@ public class VariablesTheme {
         char leftHand = '(';
         char rightHand = ')';
 
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(backSlash);
-        System.out.println();
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(backSlash);
-        System.out.println();
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(dash);
-        System.out.print(leftHand);
-        System.out.print(space);
-        System.out.print(rightHand);
-        System.out.print(backSlash);
-        System.out.println();
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(backSlash);
-        System.out.println();
-        System.out.print(slash);
-        System.out.print(dash);
-        System.out.print(dash);
-        System.out.print(dash);
-        System.out.print(dash);
-        System.out.print(slash);
-        System.out.print(backSlash);
-        System.out.print(dash);
-        System.out.print(dash);
-        System.out.println(backSlash);
+        System.out.println("" + space + space + space + space + slash + backSlash);
+        System.out.println("" + space + space + space + slash + space + space + backSlash);
+        System.out.println("" + space + space + slash + dash + leftHand + space + rightHand + backSlash);
+        System.out.println("" + space + slash + space + space + space + space + space + space + backSlash);
+        System.out.println("" + slash + dash + dash + dash + dash + slash + backSlash + dash + dash + backSlash);
 
         System.out.println("\n9. Произведение и сумма цифр числа");
 
@@ -193,9 +155,8 @@ public class VariablesTheme {
 
         num = 86399;
         int hourse  = num / 3600;
-        int remainingSeconds = num % 3600;
-        int minutes  = remainingSeconds / 60;
-        int seconds = remainingSeconds % 60;
+        int minutes  = num % 3600 / 60;
+        int seconds = num % 60;
 
         System.out.println(hourse + ":" + minutes + ":" + seconds);
     }
