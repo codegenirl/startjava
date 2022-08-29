@@ -177,7 +177,7 @@ public class VariablesTheme {
         System.out.print(backSlash);
         System.out.print(dash);
         System.out.print(dash);
-        System.out.print(backSlash);
+        System.out.println(backSlash);
 
         System.out.println("\n9. Произведение и сумма цифр числа");
 
