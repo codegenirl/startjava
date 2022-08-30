@@ -184,9 +184,9 @@ class IfElseStatementTheme {
         System.out.println("\n9. Подсчет количества банкнот");
 
         int balance = 567; // сумма для снятия
-        int availableCash1 = 50; // доступные банкноты для снятия номиналом 1
+        int availableCash1 = 345; // доступные банкноты для снятия номиналом 1
         int availableCash10 = 5; // доступные банкноты для снятия номиналом 10
-        int availableCash100 = 200; // доступные банкноты для снятия номиналом 100
+        int availableCash100 = 3; // доступные банкноты для снятия номиналом 100
         int sumATM = availableCash1 + (availableCash10 * 10) + (availableCash100 * 100); // всего банкнот в банкомате
          
         int withdraw1 = 0;
@@ -200,22 +200,16 @@ class IfElseStatementTheme {
         if (balance != 0 && balance <= sumATM) {
             if (availableCash100 > 0 && availableCash100 <= digit1) {
                 withdraw100 = availableCash100;
-                // System.out.println("Забираю - " + availableCash100 + " сотни. Остаток сотен в банкомате - " + (availableCash100 -= availableCash100));
             } if (availableCash100 > digit1) {
                 withdraw100 = digit1;
-                // System.out.println("Забираю - " + digit1 + " сотни. Остаток сотен в банкомате - " + (availableCash100 -= digit1));
             } if (availableCash10 > 0 && availableCash10 <= digit2) {
                 withdraw10 = availableCash10;
-                // System.out.println("Забираю - " + availableCash10 + " десятки. Остаток десяток в банкомате - " + (availableCash10 -= availableCash10));
             } if (availableCash10 > digit2) {
                 withdraw10 = digit2;
-                // System.out.println("Забираю - " + digit2 + " десятки. Остаток десяток в банкомате - " + (availableCash10 -= digit2));
             } if (availableCash1 > 0 && availableCash1 <= digit3) {
                 withdraw1 = balance - ((withdraw10 * 10) + (withdraw100 * 100));
-                // System.out.println("Забираю - " + withdraw1 + " единицы. Остаток единиц в банкомате - " + (availableCash1 -= withdraw1));
             } if (availableCash1 > digit3) {
                 withdraw1 = balance - ((withdraw10 * 10) + (withdraw100 * 100));
-                // System.out.println("Забираю - " + withdraw1 + " единицы. Остаток единиц в банкомате - " + (availableCash1 -= withdraw1));
             }
             int sumWithdraw = withdraw1 + (withdraw10 * 10) + (withdraw100 * 100);
             System.out.println("Доступные номиналы для снятия банкнот:\n" + 
@@ -229,7 +223,5 @@ class IfElseStatementTheme {
         } else {
             System.out.println("Ошибка! Сумма для снятия должна быть не менее 0 и не более " + sumATM);
         }
-
-
     }
 }
