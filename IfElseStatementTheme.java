@@ -109,14 +109,13 @@ class IfElseStatementTheme {
 
         if (deposit < 100_000) {
             percentDeposit = (deposit * 5) / 100;
-            sum = deposit + percentDeposit;
         } else if (deposit > 100_000 && deposit < 300_000) {
             percentDeposit = (deposit * 7) / 100;
-            sum = deposit + percentDeposit;
         } else {
             percentDeposit = (deposit * 10) / 100;
-            sum = deposit + percentDeposit;
         }
+
+        sum = deposit + percentDeposit;
         System.out.println("Сумма вклада: " + deposit + " руб. Начислено % " + percentDeposit + " руб. Итоговая сумма: " + sum + " руб.");
 
         System.out.println("\n7. Определение оценки по предметам");
@@ -128,28 +127,31 @@ class IfElseStatementTheme {
 
         if (historyPercent <= 60) {
             historyScore = 2;
-        } if (programmingPercent <= 60) {
-            programmingScore = 2;
-        } if (historyPercent > 60 && historyPercent <= 73) {
+        } else if (historyPercent > 60 && historyPercent <= 73) {
             historyScore = 3;
-        } if (programmingPercent > 60 && programmingPercent <= 73) {
-            programmingScore = 3;
-        } if (historyPercent > 73 && historyPercent <= 91) {
-            historyScore = 4;
-        } if (programmingPercent > 73 && programmingPercent <= 91) {
+        } else if (historyPercent > 73 && historyPercent <= 91) {
+            historyPercent = 4;
+        } else {
+            historyPercent = 5;
+        }
+        System.out.println("Оценка по истории " + historyScore);
+
+        if (programmingPercent <= 60) {
+            programmingScore = 2;
+        } else if (programmingPercent > 60 && programmingPercent <= 73) {
+            historyScore = 3;
+        } else if (programmingPercent > 73 && programmingPercent <= 91) {
             programmingScore = 4;
-        } if (historyPercent > 91) {
-            historyScore = 5;
-        } if (programmingPercent > 91) {
+        } else {
             programmingScore = 5;
         }
+        System.out.println("Оценка по программированию " + programmingScore);
+
 
         double averageScore = (historyScore + programmingScore) / 2;
         int averagePercent = (historyPercent + programmingPercent) / 2;
 
-        System.out.println("Оценка по истории " + historyScore + "\n" +
-                "Оценка по программированию " + programmingScore + "\n" +
-                "Средний балл оценок по предметам " + averageScore + "\n" + 
+        System.out.println("Средний балл оценок по предметам " + averageScore + "\n" + 
                 "Средний % по предметам " + averagePercent);
 
         System.out.println("\n8. Расчет прибыли");
